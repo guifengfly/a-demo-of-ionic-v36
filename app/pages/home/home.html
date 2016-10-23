@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>朋友圈</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="home">
+	
+	<ion-card *ngFor="let contact of contacts">
+		<ion-item>
+			<ion-avatar item-left>
+				<img src="../images/{{contact.contactid}}.jpg">
+			</ion-avatar>
+			<h3>{{contact.contactname}}</h3>
+			<p>来自 {{contact.contactfrom}}</p>
+		</ion-item>	
+		<img src="../images/{{contact.contactImgid}}.jpg" padding>
+		<ion-card-content>
+			<p>{{contact.contactcontent}}</p>
+		</ion-card-content>
+		<ion-item>
+			<button primary clear item-left>
+				<ion-icon name="thumbs-up"></ion-icon>
+				<div>{{contact.contactzan}} 赞</div>
+			</button>
+			<button primary clear item-left>
+				<ion-icon name="text"></ion-icon>
+				<div>{{contact.contactping}} 评论</div>
+			</button>
+			<ion-note item-right>
+				{{contact.contactdate}}
+			</ion-note>			
+		</ion-item>			
+	</ion-card>
+
+
+
+
+</ion-content>

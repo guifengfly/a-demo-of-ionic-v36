@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      {{item.contactname}}
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="about">
+	<ion-item>
+		<ion-avatar item-left>
+			<img src="../images/{{item.contactid}}.jpg">
+		</ion-avatar>
+		<h3>{{item.contactname}}</h3>
+		<p>{{item.contacttexxt}}</p>
+	</ion-item>
+</ion-content>

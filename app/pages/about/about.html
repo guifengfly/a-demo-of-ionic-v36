@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      联系人
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="about">
+	<ion-item *ngFor="let contact of contacts" (click)="itemClick($event,contact)">
+		<ion-avatar item-left>
+			<img src="../images/{{contact.contactid}}.jpg">
+		</ion-avatar>
+		<h3>{{contact.contactname}}</h3>
+		<p>{{contact.contacttexxt}}</p>
+	</ion-item>
+</ion-content>
